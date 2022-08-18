@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalkulator</title>
+    </head>
+    <script language = "JavaScript">
+        function tambah(){
+            var bil1 = parseFloat(document.calculator.bil1.value);
+            var bil2 = parseFloat(document.calculator.bil2.value);
+            var hasil = bil1+bil2;
+            document.calculator.hasil.value=hasil;
+        }
+        function kurang(){
+            var bil1 = parseFloat(document.calculator.bil1.value);
+            var bil2 = parseFloat(document.calculator.bil2.value);
+            var hasil = bil1-bil2;
+            document.calculator.hasil.value=hasil;
+        }
+        function kali(){
+            var bil1 = parseFloat(document.calculator.bil1.value);
+            var bil2 = parseFloat(document.calculator.bil2.value);
+            var hasil = bil1*bil2;
+            document.calculator.hasil.value=hasil;
+        }
+        function bagi(){
+            var bil1 = parseFloat(document.calculator.bil1.value);
+            var bil2 = parseFloat(document.calculator.bil2.value);
+            var hasil = bil1/bil2;
+            document.calculator.hasil.value=hasil;
+        }
+    </script>
+    <body>
+        <form name="calculator">
+        <table class="tabel">
+            <thead>
+                <h3>Kalkulator</h3>
+                <table border="1">
+            </thead>
+        <tr>
+            <td>Bil 1</td> 
+            <td><input type="number" name="bil1"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Bil 2</td> 
+            <td><input type="number" name="bil2"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Hasil</td> 
+            <td><input type="number" name="hasil"></td>
+        </tr>
+        <br>
+        <tr> 
+            <td colspan="3" align="center">
+                <input class="tombol" type="button" onclick="tambah()" value=" + ">
+                <input class="tombol" type="button" onclick="kurang()" value=" - ">
+                <input class="tombol" type="button" onclick="kali()" value=" * ">
+                <input class="tombol" type="button" onclick="bagi()" value=" / ">
+            </td>
+        </tr>
+</table>
+</form>
+    </body>
+</html>
